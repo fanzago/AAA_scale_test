@@ -1,0 +1,14 @@
+# Run in the test directory with stdout files
+
+###
+## arguments:
+## $
+##   
+## outputs: 
+####
+## F.Fanzago fanzago_at_pd.infn.it 
+####
+
+start=`grep duration stdo* | awk '{print $4}' | sort -u | head -1`
+end=`grep duration stdo* | awk '{print $4}' | sort -u | tail -1`
+echo $start $end `expr $end - $start`
